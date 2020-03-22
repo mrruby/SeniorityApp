@@ -17,6 +17,8 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* seniorityAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* seniorityAppTests.m */; };
+		492A94F42427A4D700EBFB15 /* Bulb.swift in Sources */ = {isa = PBXBuildFile; fileRef = 492A94F32427A4D700EBFB15 /* Bulb.swift */; };
+		492A94F62428006B00EBFB15 /* Bulb.m in Sources */ = {isa = PBXBuildFile; fileRef = 492A94F52428006B00EBFB15 /* Bulb.m */; };
 		564FB108F00D6B11D22AFEAE /* libPods-seniorityApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FC63B9BCF7D62BE379FF63BB /* libPods-seniorityApp-tvOSTests.a */; };
 		A8CAC12392382D210AEC5EA1 /* libPods-seniorityApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 131A80A7D97368EBB1D8485C /* libPods-seniorityApp-tvOS.a */; };
 		B3EA92BDE076772D7C679C7D /* libPods-seniorityApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 960AB159947CBA766C34B7CA /* libPods-seniorityApp.a */; };
@@ -58,6 +60,9 @@
 		2D02E4901E0B4A5D006451C7 /* seniorityApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "seniorityApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34FFAF80BF97FACA2A3BCC5B /* Pods-seniorityAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seniorityAppTests.debug.xcconfig"; path = "Target Support Files/Pods-seniorityAppTests/Pods-seniorityAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		46631C375C58972B86A15796 /* Pods-seniorityApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seniorityApp.release.xcconfig"; path = "Target Support Files/Pods-seniorityApp/Pods-seniorityApp.release.xcconfig"; sourceTree = "<group>"; };
+		492A94F22427A4D700EBFB15 /* seniorityApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "seniorityApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		492A94F32427A4D700EBFB15 /* Bulb.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bulb.swift; sourceTree = "<group>"; };
+		492A94F52428006B00EBFB15 /* Bulb.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = Bulb.m; path = seniorityApp/Bulb.m; sourceTree = "<group>"; };
 		4BDA1F2934EF00B27A15F378 /* Pods-seniorityApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seniorityApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-seniorityApp-tvOS/Pods-seniorityApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		51A340F7513F6C087CBDC447 /* Pods-seniorityApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seniorityApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-seniorityApp-tvOS/Pods-seniorityApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		86BE48F4DF7BC5A4EC4A2AFA /* Pods-seniorityApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-seniorityApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-seniorityApp-tvOSTests/Pods-seniorityApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +137,9 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				492A94F32427A4D700EBFB15 /* Bulb.swift */,
+				492A94F52428006B00EBFB15 /* Bulb.m */,
+				492A94F22427A4D700EBFB15 /* seniorityApp-Bridging-Header.h */,
 			);
 			name = seniorityApp;
 			sourceTree = "<group>";
@@ -194,7 +202,6 @@
 				34FFAF80BF97FACA2A3BCC5B /* Pods-seniorityAppTests.debug.xcconfig */,
 				E6D874DFE5ACC0A370682253 /* Pods-seniorityAppTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -292,6 +299,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1130;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -308,6 +318,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -528,7 +539,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				492A94F42427A4D700EBFB15 /* Bulb.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				492A94F62428006B00EBFB15 /* Bulb.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -582,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34FFAF80BF97FACA2A3BCC5B /* Pods-seniorityAppTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -605,6 +619,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6D874DFE5ACC0A370682253 /* Pods-seniorityAppTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = seniorityAppTests/Info.plist;
@@ -626,8 +641,10 @@
 			baseConfigurationReference = 0BF9076626AEE8BFCB00E8F8 /* Pods-seniorityApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = seniorityApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -637,6 +654,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = seniorityApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "seniorityApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -646,7 +666,9 @@
 			baseConfigurationReference = 46631C375C58972B86A15796 /* Pods-seniorityApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = seniorityApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -656,6 +678,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = seniorityApp;
+				SWIFT_OBJC_BRIDGING_HEADER = "seniorityApp-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
