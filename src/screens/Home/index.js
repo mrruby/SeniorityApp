@@ -1,20 +1,30 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, View, Button, NativeModules} from 'react-native';
-import {goAuth} from '../../../index.js';
+import {
+  StyleSheet,
+  Text,
+  View,
+  Button,
+  NativeModules,
+  Platform,
+} from 'react-native';
+import {goAuth, goDataPicker} from '../../../index.js';
 
-const Home: () => React$Node = () => {
+const Home: () => React$Node = ({componentId}) => {
   const [bulbLight, setBulbLight] = useState(false);
+
   const updateStatus = () => {
     NativeModules.Bulb.getStatus((error, isOn) => {
       setBulbLight(isOn);
     });
   };
+
   const turnBulb = () => {
     if (bulbLight) {
       return NativeModules.Bulb.turnOff();
     }
     return NativeModules.Bulb.turnOn();
   };
+
   const turnAndUpdateStatus = () => {
     turnBulb();
     updateStatus();
@@ -22,10 +32,22 @@ const Home: () => React$Node = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>HOME</Text>
+      <View
+        accessible={true}
+        accessibilityLabel="AppInfo: home screen and all app functions below">
+        <Text style={styles.title}>HOME</Text>
+        <Text style={styles.title}>ALL APP FUNCTIONS</Text>
+      </View>
+
       <Button
         onPress={turnAndUpdateStatus}
         title={`Turn bulb ${bulbLight ? 'off' : 'on'}`}
+        accessible={true}
+        accessibilityLabel="Tap me to turn the bulb!"
+      />
+      <Button
+        onPress={() => goDataPicker(componentId)}
+        title={'Data Picker Screen'}
       />
       <Button onPress={goAuth} title={'Logout'} />
     </View>
